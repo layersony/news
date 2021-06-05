@@ -14,7 +14,7 @@ def index():
 
   return render_template('index.html', general = general_source, business= business_source, enterain = ent_source, health = health_source, science = science_source, sport = sport_source, tech = tech_source)
 
-@main.route('/news/<str:id>')
-def newsdetail(id):
+@main.route('/news/<id>')
+def newsDetail(id):
   news = newsdetail(id)
   return render_template('news.html', news = news)

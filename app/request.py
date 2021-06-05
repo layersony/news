@@ -13,7 +13,7 @@ def configure_request(app):
 
 def get_sources(sources):
   get_source_url = base_url.format(sources, api_key)
-
+  print(get_source_url)
   try:
     with urllib.request.urlopen(get_source_url) as url:
       get_catergory_data = url.read()
@@ -45,9 +45,9 @@ def extractData(newsList):
 
   return news_list
 
-def newsdetail(id):
+def newsdetail(title):
 
-  get_detail_url = detail_url.format(id, api_key)
+  get_detail_url = detail_url.format(title, api_key)
 
   try:
     with urllib.request.urlopen(get_detail_url) as url:
@@ -56,15 +56,26 @@ def newsdetail(id):
 
       news_article = None
 
-      if detail_data_response:
-        author = detail_data_response.get('author')
-        title = detail_data_response.get('title')
-        description = detail_data_response.get('description')
-        urlimg = detail_data_response.get('urlToImage')
-        published = detail_data_response.get('publishedAt')
+      if detail_data_response['articles']:
+        articles_results_list = detail_data_response['articles']
+        news_article = receive_results(articles_results_list)
 
-        news_article = Article(author, title, description, urlimg, published)
     return news_article
     
   except urllib.error.URLError:
     print('Connection Failed')
+
+def receive_results(articles_list):
+    articles_results = []
+    for articles_item in articles_list:
+        
+        url = articles_item.get('url')
+        author = articles_item.get('author')
+        title = articles_item.get('title')
+        description = articles_item.get('description')
+        urlimg = articles_item.get('urlToImage')
+        published = articles_item.get('publishedAt')
+
+        news_article = Article(url,author, title, description, urlimg, published)
+        articles_results.append(news_article)
+    return articles_results

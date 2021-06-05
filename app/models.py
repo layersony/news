@@ -7,7 +7,8 @@ class Source:
     self.url = url
 
 class Article:
-  def __init__(self, author, title, description, urlimg, published):
+  def __init__(self, url, author, title, description, urlimg, published):
+    self.url = url
     self.author = author
     self.title = title
     self.description = description
