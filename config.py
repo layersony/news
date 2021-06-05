@@ -1,8 +1,7 @@
 import os
 
 class Config:
-  BASE_URL = 'https://newsapi.org/v2/sources?apiKey={}'
-  CATEGORY_URL = 'https://newsapi.org/v2/sources?category={}&apiKey={}'
+  BASE_URL = 'https://newsapi.org/v2/sources?category={}&apiKey={}'
   NEWS_API = os.environ.get('NEWS_API')
 
 class ProdConfig(Config):
@@ -12,6 +11,6 @@ class DevConfig(Config):
   DEBUG = True
 
 config_options = {
-  'development' : DevConfig,
-  'production': ProdConfig
+'development':DevConfig,
+'production':ProdConfig
 }

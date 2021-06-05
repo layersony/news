@@ -3,18 +3,14 @@ from app.models import Article, Source
 
 api_key = None
 base_url = None
-category_url = None
 
 def configure_request(app):
   global base_url, category_url, api_key
   api_key = app.config['NEWS_API']
   base_url = app.config['BASE_URL']
-  category_url = app.config['CATEGORY_URL']
 
 def get_sources(sources):
-  get_source_url = category_url.format(sources, api_key)
-
-  # get_source_url = 'https://newsapi.org/v2/sources?category=business&apiKey=12ed8518c26c4277a1d828deca6db4ee'
+  get_source_url = base_url.format(sources, api_key)
 
   try:
     with urllib.request.urlopen(get_source_url) as url:
@@ -26,7 +22,6 @@ def get_sources(sources):
       if get_catergory_response['sources']:
         news_list = get_catergory_response['sources']
         news_data = extractData(news_list)
-    
     return news_data
 
   except urllib.error.URLError:
