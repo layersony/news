@@ -1,0 +1,7 @@
+{% macro displayCatergory(catergories) %}
+    {% for cater in catergories %}
+    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 cater-card">
+        <p> {{ cater.name }}</p>
+    </div>
+    {% endfor %}
+{% endmacro %}
