@@ -1,34 +1,53 @@
+{% extends 'base.html'%}
 {% import 'macros.html' as macro %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>index</title>
-</head>
-<body>
 
-  <h2>General News</h2>
-    <div class="container"> {{ macro.displayCatergory(general) }} </div>
+{% block styles%}
+    {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+{% endblock %}
+
+{% block content %}
+<div class="container">
   
-  <h2>Business News </h2>
-    <div class="container">{{ macro.displayCatergory(business) }}</div>
+    <div class="container-fluid">
+      <h2 class="text-center">General News</h2>
+      {{ macro.displayCatergory(general) }} 
+    </div>
   
-  <h2>Enterainment News</h2>
-    <div class="container">{{ macro.displayCatergory(enterain) }}</div>
+  
+    <div class="container-fluid">
+      <h2 class="text-center">Business News </h2>
+      {{ macro.displayCatergory(business) }}
+    </div>
+  
+  
+    <div class="container-fluid">
+      <h2 class="text-center">Enterainment News</h2>
+      {{ macro.displayCatergory(enterain) }}
+    </div>
 
-  <h2>Health</h2>
-    <div class="container">{{ macro.displayCatergory(health) }}</div>
+  
+    <div class="container-fluid">
+      <h2 class="text-center">Health</h2>
+      {{ macro.displayCatergory(health) }}
+    </div>
 
-  <h2>Science</h2>
-    <div class="container">{{ macro.displayCatergory(science) }}</div>
+  
+    <div class="container-fluid">
+      <h2 class="text-center">Science</h2>
+      {{ macro.displayCatergory(science) }}
+    </div>
 
-  <h2>Sport</h2>
-    <div class="container">{{ macro.displayCatergory(sport) }}</div>
+  
+    <div class="container-fluid">
+      <h2 class="text-center">Sport</h2>
+      {{ macro.displayCatergory(sport) }}
+    </div>
+      
+    <div class="container-fluid">
+      <h2 class="text-center">Technology</h2>
+      {{ macro.displayCatergory(tech) }}
+    </div>
+</div>
 
-  <h2>Technology</h2>
-    <div class="container">{{ macro.displayCatergory(tech) }}</div>
-
-</body>
-</html>
+{% endblock %}

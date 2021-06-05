@@ -28,6 +28,8 @@ def get_sources(sources):
 
   except urllib.error.URLError:
     print('Connection Reset by peer')
+  except TypeError:
+    print('Too many Request to API. Wait for 24 hrs or Upgrade to Premium')
 
 def extractData(newsList):
 
