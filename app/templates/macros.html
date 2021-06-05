@@ -2,6 +2,18 @@
     {% for cater in catergories %}
     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 cater-card">
         <p> {{ cater.name }}</p>
+        <a href="/news/{{cater.id}}">{{cater.name}}</a>
+    </div>
+    {% endfor %}
+{% endmacro %}
+
+
+{% macro displayNews(channel) %}
+    {% for chan in channel %}
+    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 chan-card">
+        <p> {{ chan.title }}</p>
+        <img src="{{ chan.urlimg }}" alt="{{ chan.title|truncate(10)}}" class="img-responsive">
+        <a href="/news/{{chan.url}}">{{chan.author}}</a>
     </div>
     {% endfor %}
 {% endmacro %}
