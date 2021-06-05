@@ -1,5 +1,5 @@
 import urllib.request, json
-# from app.models import Article, Source
+from app.models import Article, Source
 
 api_key = None
 base_url = None
@@ -16,13 +16,34 @@ def get_sources(sources):
 
   # get_source_url = 'https://newsapi.org/v2/sources?category=business&apiKey=12ed8518c26c4277a1d828deca6db4ee'
 
-  with urllib.request.urlopen(get_source_url) as url:
-    get_catergory_data = url.read()
-    get_catergory_response = json.loads(get_catergory_data)
+  try:
+    with urllib.request.urlopen(get_source_url) as url:
+      get_catergory_data = url.read()
+      get_catergory_response = json.loads(get_catergory_data)
 
-    news_data = None
+      news_data = None
 
-    if get_catergory_response['sources']:
-      news_list = get_catergory_response['sources']
-      news_data = extractData(news_list)
+      if get_catergory_response['sources']:
+        news_list = get_catergory_response['sources']
+        news_data = extractData(news_list)
+    
+    return news_data
 
+  except urllib.error.URLError:
+    print('Connection Reset by peer')
+
+def extractData(newsList):
+
+  news_list = []
+
+  for news in newsList:
+    id = news.get('id')
+    name = news.get('name')
+    desc = news.get('description')
+    catergory = news.get('catergory')
+    url = news.get('url')
+
+    source_list = Source(id, name, desc, catergory, url)
+    news_list.append(source_list)
+
+  return news_list
