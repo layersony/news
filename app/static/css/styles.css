@@ -3,7 +3,6 @@ body{
 }
 
 .navcustom{
-  /* background-color: rgb(158, 158, 158); */
   background-color: white;
   min-height: 100px;
   padding: 10px;
@@ -25,7 +24,6 @@ body{
   margin-top: 15px;
   font-size: 20px;
   border-radius: 5px;
-  /* color: #ffffff; */
   border: 2px solid;
 }
 
@@ -43,7 +41,16 @@ body{
   overflow-y: hidden;
 }
 .wrapper::-webkit-scrollbar{
-  width: 20px;
+  width: 5px;
+  height: 8px;
+  background-color: #aaa;
+  border-radius: 10px;
+
+}
+
+.wrapper::-webkit-scrollbar-thumb {
+  background: #000;
+  border-radius: 10px;
 }
 .wrapper .item {
   border-radius: 10px;
