@@ -20,11 +20,19 @@
         {% for chan in channel %}
         <div class="col-md-3 chan-card mt-2">
             <div class="chad-crd text-center">
-                <p> {{ chan.title| truncate(40) }}</p>
+                <p> {{ chan.title| truncate(50) }}</p>
                 <img src="{{ chan.urlimg }}" alt="{{ chan.title|truncate(10)}}" class="img-fluid">
-                <div class="text-center">
-                    <a href="{{chan.url}}"><button class="btn btn-outline-success mt-2">View Article</button></a>
+                <div class="bg-white moreInfo">
+                    <p>{{ chan.description}}</p>
+                    <div class="artInfo d-md-flex justify-content-between">
+                        <p>By: {{ chan.author }}</p>
+                        <p>On: {{ chan.published }}</p>
+                    </div>
+                    <div class="text-center">
+                        <a href="{{chan.url}}"><button class="btn btn-outline-success mt-2">View Article</button></a>
+                    </div>
                 </div>
+
             </div>
         </div>
         {% endfor %}
