@@ -1,3 +1,3 @@
-export NEWS_API='057f1711bce74e37ab89535b8c97803d'
+export NEWS_API='a08e0ba9450040b7b4912a1f22c21b33'
 
 python3 manage.py server
