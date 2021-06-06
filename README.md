@@ -13,7 +13,7 @@ An Application to help busy workers to keep up with current affairs happening ar
 ## Access the website
 Need the latest browser to be able to View
 
-Follow this link 
+Follow this link https://news-app-moringa.herokuapp.com/
 
 It is hosted by heroku
 
@@ -25,7 +25,7 @@ It is hosted by heroku
 * In your terminal:
         
         $ git clone `https://github.com/layersony/news.git`
-        $ cd News-Highlight
+        $ cd news
 
 ## Running the Application
 
