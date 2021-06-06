@@ -1,13 +1,8 @@
+{% extends 'base.html'%}
 {% import 'macros.html' as macro %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>news</title>
-</head>
-<body>
-  <h3> {{ macro.displayNews(news) }}</h3>
-</body>
-</html>
+
+<div class="container">
+  {% block content %}
+    <h3> {{ macro.displayNews(news) }}</h3>
+  {% endblock %}
+</div>
