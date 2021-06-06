@@ -39,7 +39,7 @@ It is hosted by heroku
 
 * To run the tests for the application file:
 
-        $ python3 source_test.py
+        $ python3 manage.py test
         
 ## Technologies Used
 HTML, CSS & Bootstrap
