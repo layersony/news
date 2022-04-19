@@ -1,0 +1,211 @@
+html, body{
+  font-family: 'Raleway', sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(200, 206, 200);
+  border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #808080;
+  border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(0, 0, 0);
+}
+
+.navbar{
+  .navbar-brand{
+    font-family: 'Rubik Bubbles', cursive;
+    font-size: 30px;
+  }
+}
+
+.landing{
+  background: rgba(0, 0, 0, 0.26) url("../images/background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: darken;
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  .landingContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    #playbtn{
+      width: 100px;
+      height: auto;
+    }
+    #landinCatchy{
+      font-size: 35px;
+      font-weight: 800;
+      font-family: 'Square Peg', cursive;
+      color: white;
+    }
+    #heading{
+      font-size: 40px;
+      text-align: center;
+      font-weight: 700;
+      color: white;
+    }
+  }
+
+  .custom-shape-divider-bottom-1650357073 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin-bottom: -5px;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    svg {
+      position: relative;
+      display: block;
+      width: calc(100% + 1.3px);
+      height: 150px;
+      transform: rotateY(180deg);
+    }
+    .shape-fill {
+      fill: #FFFFFF;
+    }
+  }
+}
+
+#videos{
+  min-height: 50vh;
+  .heading{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    h4{
+      color: maroon;
+      font-size: 20px;
+      font-weight: 800;
+      &::before{
+        display: inline-block;
+        content: "";
+        border-top: .4rem solid black;
+        border-radius: 10px;
+        width: 2rem;
+        margin: 0 0.4rem;
+        transform: translateY(0.5rem);
+      }
+      &::after{
+        display: inline-block;
+        content: "";
+        border-top: .4rem solid black;
+        border-radius: 10px;
+        width: 2rem;
+        margin: 0 0.4rem;
+        transform: translateY(-1rem);
+      }
+    }
+  }
+  iframe{
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+  }
+  .scrollmenu{
+    background-color: rgba(228, 235, 228, 0.205);
+    overflow: auto;
+    white-space: nowrap;
+    .scrollitems{
+      display: inline-block;
+      padding: 14px;
+      text-decoration: none;
+    }
+  }
+}
+
+#headlines{
+  height: 70vh;
+  .heading{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    h4{
+      color: maroon;
+      font-size: 20px;
+      font-weight: 800;
+      &::before{
+        display: inline-block;
+        content: "";
+        border-top: .4rem solid black;
+        border-radius: 10px;
+        width: 2rem;
+        margin: 0 0.4rem;
+        transform: translateY(0.5rem);
+      }
+      &::after{
+        display: inline-block;
+        content: "";
+        border-top: .4rem solid black;
+        border-radius: 10px;
+        width: 2rem;
+        margin: 0 0.4rem;
+        transform: translateY(-1rem);
+      }
+    }
+  }
+
+  .newshead{
+    .newschannel{
+      color: black;
+      text-decoration: none;
+      padding: 6px;
+      border-bottom: 4px solid #808080;
+      min-width: 90px;
+      text-align: center;
+      &:hover{
+        color: white;
+        background-color: #b8b6b6;
+        border-radius: 10px 10px 0 0;
+      }
+    }
+    .active{
+      color: white;
+      background-color: #808080;
+      border-radius: 10px 10px 0 0;
+    }
+  }
+
+  .newscontent{
+    height: 50vh;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .landing{
+    min-height: 70vh;
+  }
+  .custom-shape-divider-bottom-1650357073 {
+    svg {
+      width: calc(100% + 1.3px);
+      height: 90px !important;
+    }
+  }
+  #videos{
+    .heading{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+}

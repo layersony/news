@@ -1,0 +1,261 @@
+html, body {
+  font-family: 'Raleway', sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #c8cec8;
+  border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #808080;
+  border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: black;
+}
+
+.navbar .navbar-brand {
+  font-family: 'Rubik Bubbles', cursive;
+  font-size: 30px;
+}
+
+.landing {
+  background: rgba(0, 0, 0, 0.26) url("../images/background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: darken;
+  min-height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.landing .landingContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 600px;
+}
+
+.landing .landingContent #playbtn {
+  width: 100px;
+  height: auto;
+}
+
+.landing .landingContent #landinCatchy {
+  font-size: 35px;
+  font-weight: 800;
+  font-family: 'Square Peg', cursive;
+  color: white;
+}
+
+.landing .landingContent #heading {
+  font-size: 40px;
+  text-align: center;
+  font-weight: 700;
+  color: white;
+}
+
+.landing .custom-shape-divider-bottom-1650357073 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin-bottom: -5px;
+  overflow: hidden;
+  line-height: 0;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.landing .custom-shape-divider-bottom-1650357073 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 150px;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.landing .custom-shape-divider-bottom-1650357073 .shape-fill {
+  fill: #FFFFFF;
+}
+
+#videos {
+  min-height: 50vh;
+}
+
+#videos .heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#videos .heading h4 {
+  color: maroon;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+#videos .heading h4::before {
+  display: inline-block;
+  content: "";
+  border-top: .4rem solid black;
+  border-radius: 10px;
+  width: 2rem;
+  margin: 0 0.4rem;
+  -webkit-transform: translateY(0.5rem);
+          transform: translateY(0.5rem);
+}
+
+#videos .heading h4::after {
+  display: inline-block;
+  content: "";
+  border-top: .4rem solid black;
+  border-radius: 10px;
+  width: 2rem;
+  margin: 0 0.4rem;
+  -webkit-transform: translateY(-1rem);
+          transform: translateY(-1rem);
+}
+
+#videos iframe {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+}
+
+#videos .scrollmenu {
+  background-color: rgba(228, 235, 228, 0.205);
+  overflow: auto;
+  white-space: nowrap;
+}
+
+#videos .scrollmenu .scrollitems {
+  display: inline-block;
+  padding: 14px;
+  text-decoration: none;
+}
+
+#headlines {
+  height: 70vh;
+}
+
+#headlines .heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#headlines .heading h4 {
+  color: maroon;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+#headlines .heading h4::before {
+  display: inline-block;
+  content: "";
+  border-top: .4rem solid black;
+  border-radius: 10px;
+  width: 2rem;
+  margin: 0 0.4rem;
+  -webkit-transform: translateY(0.5rem);
+          transform: translateY(0.5rem);
+}
+
+#headlines .heading h4::after {
+  display: inline-block;
+  content: "";
+  border-top: .4rem solid black;
+  border-radius: 10px;
+  width: 2rem;
+  margin: 0 0.4rem;
+  -webkit-transform: translateY(-1rem);
+          transform: translateY(-1rem);
+}
+
+#headlines .newshead .newschannel {
+  color: black;
+  text-decoration: none;
+  padding: 6px;
+  border-bottom: 4px solid #808080;
+  min-width: 90px;
+  text-align: center;
+}
+
+#headlines .newshead .newschannel:hover {
+  color: white;
+  background-color: #b8b6b6;
+  border-radius: 10px 10px 0 0;
+}
+
+#headlines .newshead .active {
+  color: white;
+  background-color: #808080;
+  border-radius: 10px 10px 0 0;
+}
+
+#headlines .newscontent {
+  height: 50vh;
+}
+
+@media only screen and (max-width: 500px) {
+  .landing {
+    min-height: 70vh;
+  }
+  .custom-shape-divider-bottom-1650357073 svg {
+    width: calc(100% + 1.3px);
+    height: 90px !important;
+  }
+  #videos .heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
